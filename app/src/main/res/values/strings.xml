@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">TresEnRaya</string>
-    <string name="title">TRES EN RAYA</string>
-    <string name="playerX">turno de la X\n</string>
-    <string name="playerO">turno de la o\n</string>
-    <string name="restartgame">Restartgame\n</string>
-    <string name="winplayerX">winplayerX</string>
-    <string name="winplayerO">winplayer0</string>
-    <string name="tie">Empate\n</string>s
+    <string name="app_name">15 Puzzle</string>
+    <string name="Puzle4x4">Puzzle  4x4</string>
+    <string name="btn_shuffle">Desordenar</string>
+    <string name="btn_restart_game">Reiniciar</string>
+    <string name="game_status_initial"></string>
+    <string name="game_status_win">Puzzle Resuelto</string>
 </resources>

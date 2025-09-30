@@ -1,120 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/TXVTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:text="@string/Puzle4x4"
         android:layout_centerHorizontal="true"
-        android:textSize="25dp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
         />
+
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/GLYBoard"
         android:layout_below="@+id/TXVTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:columnCount="3"
-        android:rowCount="3"
+        android:layout_marginTop="20dp"
+        android:columnCount="4"
+        android:rowCount="4"
         android:useDefaultMargins="true"
         android:alignmentMode="alignMargins"
+        android:animateLayoutChanges="true"
+        >
 
-    >
-     <Button
-         android:id="@+id/BTN00"
-         android:layout_width="100dp"
-         android:layout_height="100dp"
-         android:background="@color/blue"
-
-         >
-
-     </Button>
-        <Button
-            android:id="@+id/BTN01"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN02"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN11"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN20"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN21"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-            >
-
-        </Button>
-        <Button
-            android:id="@+id/BTN22"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/blue"
-
-
-            >
-
-        </Button>
-    </GridLayout>
+        <Button android:id="@+id/BTN00" android:text="1" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN01" android:text="2" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN02" android:text="3" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN03" android:text="4" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN10" android:text="5" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN11" android:text="6" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN12" android:text="7" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN13" android:text="8" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN20" android:text="9" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN21" android:text="10" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN22" android:text="11" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN23" android:text="12" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN30" android:text="13" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN31" android:text="14" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN32" android:text="15" style="@style/PuzzleButtonStyle" />
+        <Button android:id="@+id/BTN33" android:text="0" style="@style/EmptyButtonStyle" /> </GridLayout>
 
     <TextView
         android:id="@+id/TXVPlayer"
@@ -122,20 +52,34 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/GLYBoard"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:layout_marginTop="15dp"
-        android:text="@string/playerO"
-
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:text="@string/game_status_initial"
         />
 
-    <Button
-        android:id="@+id/BTNRestartgame"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_below="@+id/TXVPlayer"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:layout_marginTop="15sp"
-        android:visibility="invisible"
-        android:text="@string/restartgame" />
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/BTNShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/btn_shuffle"
+            android:layout_marginEnd="15dp"/>
+
+        <Button
+            android:id="@+id/BTNRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/btn_restart_game"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
